@@ -2,4 +2,41 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  height: 1vh;
+  background: linear-gradient(90deg,#f6b750,#f1c444 34.59%,#a4b043);
+  overflow-y: hidden;
 }
+
+.wheel {
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 170vh;
+  max-width: 100%;
+  position: absolute;
+  z-index: 0;
+}
+
+.outline {
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 170vh;
+  max-width: 100%;
+  position: absolute;
+  z-index: 1;
+  animation: magic 4s infinite;
+}
+
+@keyframes magic {
+  0% {
+    clip-path: polygon(0 0, 0 100%, 10% 100%, 10% 0);
+  }
+  40% {
+    clip-path: polygon(99% 0, 99% 100%, 100% 100%, 100% 0);
+  }
+  100% {
+    clip-path: polygon(99% 0, 99% 100%, 100% 100%, 100% 0);
+  }
+}
+
